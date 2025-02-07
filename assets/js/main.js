@@ -90,6 +90,13 @@ modalBtns.forEach((btn, index) => {
     modal(index);
   });
 });
+modalViews.forEach((views) => {
+  views.addEventListener("click", (event) => {
+    if (event.target === views) {
+      views.classList.remove("active-modal");
+    }
+  });
+});
 
 modalCLoses.forEach((close) => {
   close.addEventListener("click", () => {
@@ -120,15 +127,15 @@ let swiperPortfolio = new Swiper(".portfolio__container", {
 
 let swiperTestimonial = new Swiper(".testimonial__container", {
   cssMode: true,
-  loop: true,
+  loop: false,
   grabCursor: true,
   // spaceBetween: 48,
   navigation: {
-    nextEl: ".swiper-button-next.tt",
-    prevEl: ".swiper-button-prev.tt",
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: ".swiper-pagination-testimonial",
     clickable: true,
     dynamicBullets: true,
   },
