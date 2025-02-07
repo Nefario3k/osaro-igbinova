@@ -777,6 +777,15 @@ button {
   padding: 1.5rem;
   border-radius: 0.5rem;
 }
+.services__modal-content.large {
+  position: relative;
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  max-width: 750px;
+  max-height: 90vh;
+  overflow: auto;
+}
 
 .services__modal-services {
   row-gap: 1rem;
@@ -1376,7 +1385,7 @@ button {
     padding: 6rem 0 2rem 2.5rem;
   }
 
-  .services__modal-content {
+  .services__modal-content:not(.large) {
     width: 450px;
   }
 
